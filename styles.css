@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Poppins;
+    text-decoration: none;
+}
+
+p, a, span {
+    color: #6C6C6C;
+}
+
+a:focus, span:focus {
+    pointer-events: none;
+}
+
+a:hover, span:hover {
+    cursor: pointer;
+}
+
+.container {
+    margin: auto;
+    max-width: 1280px;
+    width: 100%;
+}
+
+nav, header {
+    width: 100%;
+    background-color: #F5F5F5;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav img {
+    margin-left: 32px;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+    gap: 16px;
+}
+
+.nav-items img:hover {
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.ProfileRes {
+    display: none;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+    gap: 32px;
+    max-width: 592px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.1rem;
+    width: 350px;
+}
+
+.main-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #313131;
+}
+
+.main-content p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23.8px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 52px;
+    gap: 16px;
+    width: 280px;
+}
+
+.location, .countries, .photos {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    height: 24px;
+}
+
+section, footer {
+    padding-right: 32px;
+    padding-left: 32px;
+    width: auto;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.gallery1, .gallery2, .gallery3 {
+    display: flex;
+    gap: 24px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+footer span {
+    font-size: 14px;
+}
+
+.links {
+    display: flex;
+    gap: 16px;
+}
+
+@media screen and (max-width: 1260px) {
+    .gallery1, .gallery2, .gallery3 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .info {
+        margin-right: 52px;
+        gap: 16px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .info {
+        margin-top: 24px;
+        margin-left: 32px;
+        gap: 16px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 677px) {
+    header, .main, .info{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main {
+        display: flex;
+        gap: 16px;
+    }
+
+    header, .main-content {
+        width: auto;
+    }
+
+    .main-content {
+        gap: 8px;
+    }
+
+    .Profile2 {
+        display: none;
+    }
+
+    .ProfileRes {
+        display: flex;
+    }
+
+    .main-content h1 {
+        font-size: 24px;
+    }
+    
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 32px;
+        gap: 8px;
+    }
+
+}
+
+@media screen and (max-width: 645px) {
+    .main {
+        margin-right: 32px;
+    }
+}
+
+@media screen and (max-width: 614px) {
+    .nav-items a {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    nav img {
+        margin-left: 16px;
+    }
+    
+    .nav-items {
+        margin-right: 16px;
+    }
+
+    .photo-gallery {
+        gap: 16px;
+    }
+
+    .gallery1, .gallery2, .gallery3 {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .gallery1 img, .gallery2 img, .gallery3 img {
+        padding: 0 16px;
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        align-items: center;
+        gap: 16px;
+    }
+}
