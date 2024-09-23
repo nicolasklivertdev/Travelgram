@@ -119,15 +119,15 @@ section {
 }
 
 .photo-gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
     gap: 24px;
 }
 
-.gallery1, .gallery2, .gallery3 {
-    display: flex;
-    gap: 24px;
+.photo-gallery img {
+    width: 100%;
+    height: auto;
 }
 
 footer {
@@ -147,11 +147,9 @@ footer span {
     gap: 16px;
 }
 
-@media screen and (max-width: 1260px) {
-    .gallery1, .gallery2, .gallery3 {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
+@media screen and (max-width: 1200px) {
+    .photo-gallery {
+        grid-template-columns: auto auto auto;
     }
 }
 
@@ -160,6 +158,12 @@ footer span {
         margin-right: 52px;
         gap: 16px;
         width: auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .photo-gallery {
+        grid-template-columns: auto auto;
     }
 }
 
@@ -231,6 +235,12 @@ footer span {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .photo-gallery {
+        grid-template-columns: auto;
+    }
+}
+
 @media screen and (max-width: 520px) {
     nav img {
         margin-left: 16px;
@@ -244,15 +254,8 @@ footer span {
         gap: 16px;
     }
 
-    .gallery1, .gallery2, .gallery3 {
-        justify-content: center;
-        gap: 16px;
-    }
-
-    .gallery1 img, .gallery2 img, .gallery3 img {
-        padding: 0 16px;
-        width: 100%;
-        height: auto;
+    .photo-gallery img {
+        padding: 0;
     }
 
     footer {
